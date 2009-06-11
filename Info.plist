@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>iCalFix</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.robertblum.iCalFix</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>0.6.1</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.6.1</string>
+	<key>NSMainNibFile</key>
+	<string>icfPreferencePane.nib</string>
+	<key>NSPrincipalClass</key>
+	<string>icfLoader</string>
+	<key>SIMBLTargetApplications</key>
+	<array>
+		<dict>
+			<key>BundleIdentifier</key>
+			<string>com.apple.iCal</string>
+			<key>MaxBundleVersion</key>
+			<integer>1058</integer>
+			<key>MinBundleVersion</key>
+			<integer>1055</integer>
+		</dict>
+	</array>
+</dict>
+</plist>

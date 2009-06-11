@@ -1,0 +1,28 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {checkForUpdates = id; }; 
+            CLASS = SUUpdater; 
+            LANGUAGE = ObjC; 
+            SUPERCLASS = NSObject; 
+        }, 
+        {CLASS = icfNumbersOnlyFormatter; LANGUAGE = ObjC; SUPERCLASS = NSFormatter; }, 
+        {
+            ACTIONS = {checkForUpdate = id; donate = id; setAdvanceTime = id; setSound = id; }; 
+            CLASS = icfPreferencePane; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                advanceTimeUnit = NSPopUpButton; 
+                alarmSounds = NSPopUpButton; 
+                allDayAdvanceTimeUnit = NSPopUpButton; 
+                allDayWarningTime = NSTextField; 
+                buildLabel = NSTextField; 
+                prefView = NSView; 
+                warningTime = NSTextField; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}

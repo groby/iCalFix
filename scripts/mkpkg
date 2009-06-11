@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+# Make a package of iCalFix
+#
+
+ICF_ROOT=~/Projects/iCalFix
+
+rm -rf ~/Build/Release\ UB/iCalFix
+pushd $ICF_ROOT/trunk
+xcodebuild -project iCalFix.xcodeproj -configuration "Release UB"
+popd
+sudo rm -rf $ICF_ROOT/package/Package_Root/Library/InputManagers/iCalFix
+sudo cp -R ~/Build/Release\ UB/iCalFix $ICF_ROOT/package/Package_Root/Library/InputManagers/iCalFix
+sudo /Developer/Tools/packagemaker -build -proj $ICF_ROOT/trunk/icfPkg.pmproj -p $ICF_ROOT/iCalFix.pkg -v
+

@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D044F55099F297E001BB04D /* icfPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D044F54099F297E001BB04D /* icfPlugin.m */; };
+		1D0CA92F0A6050B700E6AB60 /* icfLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D0CA92E0A6050B700E6AB60 /* icfLoader.m */; };
+		1D0D3EE70A614E0E00F90793 /* Info in Resources */ = {isa = PBXBuildFile; fileRef = 1D0D3EE60A614E0E00F90793 /* Info */; };
+		1D0D3EEF0A614FF900F90793 /* iCalFix.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D5B49B6048680CD000E48DA /* iCalFix.bundle */; };
+		1D0D3EFF0A614FFC00F90793 /* Info in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D0D3EE60A614E0E00F90793 /* Info */; };
+		1D54F01C0A42959F00CBF4E9 /* icfPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D54F01A0A42959F00CBF4E9 /* icfPreferences.m */; };
+		1D66C4850A5B23EC00E38A2A /* icfDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1D66C4840A5B23EC00E38A2A /* icfDefaults.plist */; };
+		1D66C4BA0A5B2ED900E38A2A /* icfPreferencePane.nib in Resources */ = {isa = PBXBuildFile; fileRef = 1D66C4B40A5B2ED900E38A2A /* icfPreferencePane.nib */; };
+		1D66C4BE0A5B2F7E00E38A2A /* icfPreferencePane.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D66C4BD0A5B2F7E00E38A2A /* icfPreferencePane.m */; };
+		1D6B3A710FE0CCDA00ED2EF4 /* icfCALPreferencesGeneralPaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B3A700FE0CCDA00ED2EF4 /* icfCALPreferencesGeneralPaneController.m */; };
+		1D80322509A2161B001A05CB /* icfCALPreferencesPaneController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D80322309A2161B001A05CB /* icfCALPreferencesPaneController.m */; };
+		1D9A02FB0CA3332E0057C23B /* MethodSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9A02F90CA3332E0057C23B /* MethodSwizzle.m */; };
+		1DA7154C0C3DF741003388F2 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1DA7141B0C3DF147003388F2 /* Growl.framework */; };
+		1DA8DAF00BA7B8B3005EE86C /* pref_icalfix.tif in Resources */ = {isa = PBXBuildFile; fileRef = 1DA8DAEE0BA7B8B3005EE86C /* pref_icalfix.tif */; };
+		1DE9A553097B64F600E1AEA0 /* iCalFix.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1DE9A551097B64F600E1AEA0 /* iCalFix.strings */; };
+		1DE9A563097B687400E1AEA0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D5B49B7048680CD000E48DA /* Info.plist */; };
+		1DF0A2230C99048400CF4CFF /* ExceptionHandling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF0A21D0C99048400CF4CFF /* ExceptionHandling.framework */; };
+		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1D0D3EEA0A614EFF00F90793 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			comments = "Copy iCaFix into InputManagers directory";
+			dstPath = iCalFix;
+			dstSubfolderSpec = 16;
+			files = (
+				1D0D3EFF0A614FFC00F90793 /* Info in CopyFiles */,
+				1D0D3EEF0A614FF900F90793 /* iCalFix.bundle in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DA714270C3DF198003388F2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1DA7154C0C3DF741003388F2 /* Growl.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C1672FE841209C02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		089C167FFE841241C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1D044F53099F297E001BB04D /* icfPlugin.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = icfPlugin.h; sourceTree = "<group>"; };
+		1D044F54099F297E001BB04D /* icfPlugin.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = icfPlugin.m; sourceTree = "<group>"; };
+		1D044FAF099F2C80001BB04D /* iCalFix_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = iCalFix_Prefix.pch; sourceTree = "<group>"; };
+		1D0CA92D0A6050B700E6AB60 /* icfLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icfLoader.h; sourceTree = "<group>"; };
+		1D0CA92E0A6050B700E6AB60 /* icfLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icfLoader.m; sourceTree = "<group>"; };
+		1D0D3EE60A614E0E00F90793 /* Info */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Info; sourceTree = "<group>"; };
+		1D54F01A0A42959F00CBF4E9 /* icfPreferences.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = icfPreferences.m; sourceTree = "<group>"; };
+		1D54F01B0A42959F00CBF4E9 /* icfPreferences.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = icfPreferences.h; sourceTree = "<group>"; };
+		1D66C4840A5B23EC00E38A2A /* icfDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = icfDefaults.plist; sourceTree = "<group>"; };
+		1D66C4B50A5B2ED900E38A2A /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/icfPreferencePane.nib; sourceTree = "<group>"; };
+		1D66C4BC0A5B2F7E00E38A2A /* icfPreferencePane.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = icfPreferencePane.h; sourceTree = "<group>"; };
+		1D66C4BD0A5B2F7E00E38A2A /* icfPreferencePane.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = icfPreferencePane.m; sourceTree = "<group>"; };
+		1D6B3A6F0FE0CCDA00ED2EF4 /* icfCALPreferencesGeneralPaneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icfCALPreferencesGeneralPaneController.h; sourceTree = "<group>"; };
+		1D6B3A700FE0CCDA00ED2EF4 /* icfCALPreferencesGeneralPaneController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icfCALPreferencesGeneralPaneController.m; sourceTree = "<group>"; };
+		1D6B3AB80FE0CEBC00ED2EF4 /* CALOccurrence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALOccurrence.h; sourceTree = "<group>"; };
+		1D6B3ACB0FE0CEF100ED2EF4 /* CALCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALCalendar.h; sourceTree = "<group>"; };
+		1D6B3B100FE0CFCA00ED2EF4 /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
+		1D6B3B300FE0D0C600ED2EF4 /* CALPreferencesGeneralPaneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALPreferencesGeneralPaneController.h; sourceTree = "<group>"; };
+		1D6B3B4A0FE0D19B00ED2EF4 /* CALPreferencesPanesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALPreferencesPanesController.h; sourceTree = "<group>"; };
+		1D6B3B690FE0D29000ED2EF4 /* icfCALPreferencesPaneController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icfCALPreferencesPaneController.h; sourceTree = "<group>"; };
+		1D80322309A2161B001A05CB /* icfCALPreferencesPaneController.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = icfCALPreferencesPaneController.m; sourceTree = "<group>"; };
+		1D9A02F80CA3332E0057C23B /* MethodSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodSwizzle.h; sourceTree = "<group>"; };
+		1D9A02F90CA3332E0057C23B /* MethodSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodSwizzle.m; sourceTree = "<group>"; };
+		1DA7141B0C3DF147003388F2 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
+		1DA8DAEF0BA7B8B3005EE86C /* English */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; name = English; path = English.lproj/pref_icalfix.tif; sourceTree = "<group>"; };
+		1DE9A552097B64F600E1AEA0 /* English */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/iCalFix.strings; sourceTree = "<group>"; };
+		1DF0A21D0C99048400CF4CFF /* ExceptionHandling.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExceptionHandling.framework; path = /System/Library/Frameworks/ExceptionHandling.framework; sourceTree = "<absolute>"; };
+		8D5B49B6048680CD000E48DA /* iCalFix.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iCalFix.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D5B49B3048680CD000E48DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
+				1DF0A2230C99048400CF4CFF /* ExceptionHandling.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* iCalFix */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AFFE84173DC02AAC07 /* Classes */,
+				32C88E010371C26100C91783 /* Other Sources */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
+				19C28FB8FE9D52D311CA2CBB /* Products */,
+				1D0D3EE60A614E0E00F90793 /* Info */,
+			);
+			name = iCalFix;
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1DA7141B0C3DF147003388F2 /* Growl.framework */,
+				1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */,
+				1058C7AEFEA557BF11CA2CBB /* Other Frameworks */,
+			);
+			name = "Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1DA8DAEE0BA7B8B3005EE86C /* pref_icalfix.tif */,
+				1D66C4B40A5B2ED900E38A2A /* icfPreferencePane.nib */,
+				1D66C4840A5B23EC00E38A2A /* icfDefaults.plist */,
+				1DE9A551097B64F600E1AEA0 /* iCalFix.strings */,
+				8D5B49B7048680CD000E48DA /* Info.plist */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AFFE84173DC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D8D12900FE0D3920081338C /* Method Swizzling */,
+				1D8D128F0FE0D3760081338C /* Preferences */,
+				1D6B3AB70FE0CEBC00ED2EF4 /* CALCore */,
+				1D044F54099F297E001BB04D /* icfPlugin.m */,
+				1D044F53099F297E001BB04D /* icfPlugin.h */,
+				1D0CA92D0A6050B700E6AB60 /* icfLoader.h */,
+				1D0CA92E0A6050B700E6AB60 /* icfLoader.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7ACFEA557BF11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7AEFEA557BF11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF0A21D0C99048400CF4CFF /* ExceptionHandling.framework */,
+				089C167FFE841241C02AAC07 /* AppKit.framework */,
+				D2F7E65807B2D6F200F64583 /* CoreData.framework */,
+				089C1672FE841209C02AAC07 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FB8FE9D52D311CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D5B49B6048680CD000E48DA /* iCalFix.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D6B3AB70FE0CEBC00ED2EF4 /* CALCore */ = {
+			isa = PBXGroup;
+			children = (
+				1D6B3B4A0FE0D19B00ED2EF4 /* CALPreferencesPanesController.h */,
+				1D6B3B100FE0CFCA00ED2EF4 /* API.h */,
+				1D6B3ACB0FE0CEF100ED2EF4 /* CALCalendar.h */,
+				1D6B3AB80FE0CEBC00ED2EF4 /* CALOccurrence.h */,
+				1D6B3B300FE0D0C600ED2EF4 /* CALPreferencesGeneralPaneController.h */,
+			);
+			path = CALCore;
+			sourceTree = "<group>";
+		};
+		1D8D128F0FE0D3760081338C /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				1D66C4BD0A5B2F7E00E38A2A /* icfPreferencePane.m */,
+				1D66C4BC0A5B2F7E00E38A2A /* icfPreferencePane.h */,
+				1D54F01A0A42959F00CBF4E9 /* icfPreferences.m */,
+				1D54F01B0A42959F00CBF4E9 /* icfPreferences.h */,
+				1D6B3A6F0FE0CCDA00ED2EF4 /* icfCALPreferencesGeneralPaneController.h */,
+				1D6B3A700FE0CCDA00ED2EF4 /* icfCALPreferencesGeneralPaneController.m */,
+				1D6B3B690FE0D29000ED2EF4 /* icfCALPreferencesPaneController.h */,
+				1D80322309A2161B001A05CB /* icfCALPreferencesPaneController.m */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
+		1D8D12900FE0D3920081338C /* Method Swizzling */ = {
+			isa = PBXGroup;
+			children = (
+				1D9A02F80CA3332E0057C23B /* MethodSwizzle.h */,
+				1D9A02F90CA3332E0057C23B /* MethodSwizzle.m */,
+			);
+			name = "Method Swizzling";
+			sourceTree = "<group>";
+		};
+		32C88E010371C26100C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				1D044FAF099F2C80001BB04D /* iCalFix_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D5B49AC048680CD000E48DA /* iCalFix */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DCED70A094B2ADE0091BC35 /* Build configuration list for PBXNativeTarget "iCalFix" */;
+			buildPhases = (
+				8D5B49AF048680CD000E48DA /* Resources */,
+				8D5B49B1048680CD000E48DA /* Sources */,
+				8D5B49B3048680CD000E48DA /* Frameworks */,
+				1DA714270C3DF198003388F2 /* CopyFiles */,
+				1D22CE060A6B4EF500441A5A /* ShellScript */,
+				1D0D3EEA0A614EFF00F90793 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iCalFix;
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = iCalFix;
+			productReference = 8D5B49B6048680CD000E48DA /* iCalFix.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DCED70E094B2ADE0091BC35 /* Build configuration list for PBXProject "iCalFix" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 089C166AFE841209C02AAC07 /* iCalFix */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D5B49AC048680CD000E48DA /* iCalFix */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D5B49AF048680CD000E48DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */,
+				1DE9A553097B64F600E1AEA0 /* iCalFix.strings in Resources */,
+				1DE9A563097B687400E1AEA0 /* Info.plist in Resources */,
+				1D66C4850A5B23EC00E38A2A /* icfDefaults.plist in Resources */,
+				1D66C4BA0A5B2ED900E38A2A /* icfPreferencePane.nib in Resources */,
+				1D0D3EE70A614E0E00F90793 /* Info in Resources */,
+				1DA8DAF00BA7B8B3005EE86C /* pref_icalfix.tif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D22CE060A6B4EF500441A5A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /usr/bin/perl;
+			shellScript = "# Xcode auto-versioning script for Subversion\n# by Axel Andersson, modified by Daniel Jalkut to add\n# \"--revision HEAD\" to the svn info line, which allows\n# the latest revision to always be used.\n\nuse strict;\n\ndie \"$0: Must be run from Xcode\" unless $ENV{\"BUILT_PRODUCTS_DIR\"};\n\n# Get the current subversion revision number and use it to set the CFBundleVersion value\nmy $REV = `/usr/local/bin/svnversion -n ./`;\nmy $INFO = \"$ENV{BUILT_PRODUCTS_DIR}/$ENV{WRAPPER_NAME}/Contents/Info.plist\";\n\nmy $version = $REV;\n\n# (Match the last group of digits and optional letter M/S):\n\n# ugly yet functional (barely) regex by Daniel Jalkut:\n#$version =~ s/([\\d]*:)(\\d+[M|S]*).*/$2/;\n\n# better yet still functional regex via Kevin \"Regex Nerd\" Ballard\n($version =~ m/\\d+[MS]*$/) && ($version = $&);\n\ndie \"$0: No Subversion revision found\" unless $version;\n\nopen(FH, \"$INFO\") or die \"$0: $INFO: $!\";\nmy $info = join(\"\", <FH>);\nclose(FH);\n\n$info =~ s/([\\t ]+<key>CFBundleVersion<\\/key>\\n[\\t ]+<string>).*?(<\\/string>)/$1$version$2/;\n\nopen(FH, \">$INFO\") or die \"$0: $INFO: $!\";\nprint FH $info;\nclose(FH);";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D5B49B1048680CD000E48DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D044F55099F297E001BB04D /* icfPlugin.m in Sources */,
+				1D80322509A2161B001A05CB /* icfCALPreferencesPaneController.m in Sources */,
+				1D54F01C0A42959F00CBF4E9 /* icfPreferences.m in Sources */,
+				1D66C4BE0A5B2F7E00E38A2A /* icfPreferencePane.m in Sources */,
+				1D0CA92F0A6050B700E6AB60 /* icfLoader.m in Sources */,
+				1D9A02FB0CA3332E0057C23B /* MethodSwizzle.m in Sources */,
+				1D6B3A710FE0CCDA00ED2EF4 /* icfCALPreferencesGeneralPaneController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C167EFE841241C02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1D66C4B40A5B2ED900E38A2A /* icfPreferencePane.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D66C4B50A5B2ED900E38A2A /* English */,
+			);
+			name = icfPreferencePane.nib;
+			sourceTree = "<group>";
+		};
+		1DA8DAEE0BA7B8B3005EE86C /* pref_icalfix.tif */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DA8DAEF0BA7B8B3005EE86C /* English */,
+			);
+			name = pref_icalfix.tif;
+			sourceTree = "<group>";
+		};
+		1DE9A551097B64F600E1AEA0 /* iCalFix.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DE9A552097B64F600E1AEA0 /* English */,
+			);
+			name = iCalFix.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D11218D09C5B40C009ECD3A /* Release UB */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(FRAMEWORK_SEARCH_PATHS)",
+					"$(SRCROOT)",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iCalFix_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/InputManagers";
+				OTHER_LDFLAGS = (
+					"-undefined",
+					suppress,
+					"-flat_namespace",
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = iCalFix;
+				VERSIONING_SYSTEM = "";
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = NO;
+			};
+			name = "Release UB";
+		};
+		1D11218E09C5B40C009ECD3A /* Release UB */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				OTHER_LDFLAGS = (
+					"-undefined",
+					define_a_way,
+				);
+			};
+			name = "Release UB";
+		};
+		1DCED70B094B2ADE0091BC35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(FRAMEWORK_SEARCH_PATHS)",
+					"$(SRCROOT)",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iCalFix_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/InputManagers";
+				PREBINDING = NO;
+				PRODUCT_NAME = iCalFix;
+				VERSIONING_SYSTEM = "";
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		1DCED70C094B2ADE0091BC35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(FRAMEWORK_SEARCH_PATHS)",
+					"$(SRCROOT)",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iCalFix_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/InputManagers";
+				PREBINDING = NO;
+				PRODUCT_NAME = iCalFix;
+				VERSIONING_SYSTEM = "";
+				WRAPPER_EXTENSION = bundle;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		1DCED70D094B2ADE0091BC35 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(FRAMEWORK_SEARCH_PATHS)",
+					"$(SRCROOT)",
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iCalFix_Prefix.pch;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/InputManagers";
+				PREBINDING = NO;
+				PRODUCT_NAME = iCalFix;
+				VERSIONING_SYSTEM = "";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Default;
+		};
+		1DCED70F094B2ADE0091BC35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = (
+					"-undefined",
+					define_a_way,
+				);
+			};
+			name = Debug;
+		};
+		1DCED710094B2ADE0091BC35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = (
+					"-undefined",
+					define_a_way,
+				);
+			};
+			name = Release;
+		};
+		1DCED711094B2ADE0091BC35 /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = (
+					"-undefined",
+					define_a_way,
+				);
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DCED70A094B2ADE0091BC35 /* Build configuration list for PBXNativeTarget "iCalFix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DCED70B094B2ADE0091BC35 /* Debug */,
+				1DCED70C094B2ADE0091BC35 /* Release */,
+				1D11218D09C5B40C009ECD3A /* Release UB */,
+				1DCED70D094B2ADE0091BC35 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		1DCED70E094B2ADE0091BC35 /* Build configuration list for PBXProject "iCalFix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DCED70F094B2ADE0091BC35 /* Debug */,
+				1DCED710094B2ADE0091BC35 /* Release */,
+				1D11218E09C5B40C009ECD3A /* Release UB */,
+				1DCED711094B2ADE0091BC35 /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

@@ -1,0 +1,19 @@
+{
+    IBClasses = (
+        {CLASS = FirstResponder; LANGUAGE = ObjC; SUPERCLASS = NSObject; }, 
+        {
+            ACTIONS = {setAdvanceTime = id; setTimeUnit = id; }; 
+            CLASS = icfPreferences; 
+            LANGUAGE = ObjC; 
+            OUTLETS = {
+                advanceTime = NSTextField; 
+                advanceTimeUnit = NSPopUpButton; 
+                alarmSounds = NSPopUpButton; 
+                buildLabel = NSTextField; 
+                prefView = NSView; 
+            }; 
+            SUPERCLASS = NSObject; 
+        }
+    ); 
+    IBVersion = 1; 
+}
